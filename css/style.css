@@ -1,0 +1,253 @@
+body{
+    background-color: #F5F5F5;
+    height: 5000px;
+}
+
+/* start compon  */
+.main-heading h2{
+    font-size: 45px;
+}
+.main-heading div {
+    width: 40px;
+    height: 5px;
+}
+/* end compon  */
+
+/* start home  */
+.home{
+    min-height: 100vh;
+    background-image: url(../images/hero-bg.jpg);
+    background-size: cover;
+    background-position: center center; 
+    background-attachment: fixed;
+}
+
+.home::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+}
+.home nav {
+    z-index: 999;
+    background-color: rgba(0,0,0,.8);
+}
+
+@media(max-width:767px){
+    .home nav ul {
+        width: 100%!important;
+    }
+}
+.home .navbar .nav-item .nav-link::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    transition: .4s;    
+}
+@media(min-width:768px){
+    .home .navbar .nav-item .nav-link:hover::after ,
+    .home .navbar .nav-item .nav-link.active::after{
+        width: 60%;
+    }
+}
+@media(max-width:767px){
+    .home .navbar .nav-item .nav-link:hover::after ,
+    .home .navbar .nav-item .nav-link.active::after{
+        width: 100%;
+    }
+}
+
+.home nav .bar span{
+    height: 1px;
+    width: 20px;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 8px;
+    transition: .5s;
+}
+
+.home .content {
+    z-index: 2;
+}
+
+.home .content h1{
+    font-size: 70px;
+}
+@media(max-width:767px){
+    .home .content h1{
+        font-size: 40px;
+    }
+    
+}
+.home .content h2{
+    font-size: 25px;
+}
+/* end home  */
+
+/* start about  */
+.about h3{
+    width: fit-content;
+}
+.about h3::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 3px;
+    background-color: #0078FF;
+}
+
+/* end about  */
+
+/* start services  */
+.services .item > div{
+    border-radius: 15px!important;
+}
+.services .item > div svg{
+    transition: .5s;
+}
+.services .item > div:hover svg{
+    background-color: #0078FF;
+    color: #fff;
+    box-shadow: 0px 0px 6px 7px #0077ff7a;
+}
+/* end services  */
+
+/* start counter  */
+.counter{
+    padding: 8rem 0;
+    min-height: 450px;
+    background-image: url(../images/counters-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat:  no-repeat;
+}
+
+.counter .overLay{
+    background-color: #0077ffb3;
+}
+/* end counter  */
+
+/* start portfolio  */
+.portfolio .item .card > div img{
+    
+    transition: .7s;
+}
+.portfolio .item .card:hover  > div img{
+    transform: scale(1.3 ,1.3);
+}
+
+.portfolio .item svg{
+    cursor: pointer;
+}
+/* end portfolio  */
+
+/* start testimonial */
+.testimonial{
+    background-image: url(../images/overlay-bg.jpg);
+}
+
+.testimonial .overLay{
+    background-color: #0077ffb3;
+    min-height: 600px;
+}
+
+.testimonial .overLay .imgs{
+    width: fit-content;
+}
+
+@media(min-width:768px){
+    .testimonial .overLay .txt{
+        width: 70%;
+    }
+}
+.testimonial .overLay .porgress{
+    width: fit-content;
+}
+.testimonial .overLay .porgress span{
+    width: 10px;
+    height: 10px;    
+    background-color: #7CADEB;
+    cursor: pointer;
+    transition: .4s;
+}
+.testimonial .overLay .porgress span.active,
+.testimonial .overLay .porgress span:hover{
+    background-color: #fff;
+}
+/*end  testimonial */
+
+/* start bolg  */
+
+.blog .footer {
+    background-color: #F5F5F5;
+    border-top: 1px solid #CBCBCB
+}
+.blog .footer .footer-img img{
+    width: 30px;
+    height: 30px;
+}
+/* end bolg  */
+
+/* start contact  */
+.contact{
+    background-image: url(../images/overlay-bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.contact .overLay{
+    background-color: #0077ffb3;   
+}
+.contact .overLay .head::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width:100px;
+    height: 3px;
+    background-color: #0078FF;
+}
+.contact form input , 
+.contact form textarea{
+    border: 1px solid #CED4DA;
+    outline: none;
+    transition: .4s;
+}
+.contact form input:focus ,.contact form textarea:focus {
+    box-shadow: 0px 0px 2px 4px #c2dbfe;
+}
+
+::placeholder{
+    margin: .5rem!important;
+}
+
+.contact form .btn{
+    width: fit-content;
+}
+.contact form .btn button{
+    transition: .2s;
+}
+.contact form .btn button:hover{
+    box-shadow: 0px 0px 2px 4px #c2dbfe;
+}
+
+.contact .links svg{
+    border: 2px solid #0078FF;
+}
+/* end contact  */
+
+/* start footer  */
+footer{
+    background-color: #0062d3;
+}
+
+/* end footer  */
